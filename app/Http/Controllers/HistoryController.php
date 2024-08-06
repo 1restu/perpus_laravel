@@ -16,7 +16,8 @@ class HistoryController extends Controller
     public function historyhapus($id_history)
     {
         try {
-            HistoryModel::findOrFail($id_history)->delete();
+            $history = HistoryModel::findOrFail($id_history);
+            $history->delete();
             return redirect('/history')->with('success', 'Data history berhasil dihapus.');
         } catch (\Exception $e) {
             return redirect('/history')->with('error', 'Data history gagal dihapus.');

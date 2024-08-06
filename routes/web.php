@@ -27,4 +27,4 @@ Route::get('/peminjaman/hapus/{id_pinjam}', [PeminjamanController::class, 'pemin
 Route::put('/peminjaman/edit/{id_pinjam}', [PeminjamanController::class, 'peminjamanedit'])->name('peminjaman.edit');
 Route::post('/peminjaman/kembalikan/{id_pinjam}', [PeminjamanController::class, 'peminjamankembalikan'])->name('peminjaman.kembalikan');
 Route::get('/history', [HistoryController::class, 'historytampil'])->name('history.tampil');
-Route::delete('/history/hapus/{id_history}', [HistoryController::class, 'historyhapus'])->name('history.hapus');
+Route::get('/history/hapus/{id_history}', [HistoryController::class, 'historyhapus'])->name('history.hapus');
